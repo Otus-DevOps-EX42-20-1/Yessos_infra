@@ -17,3 +17,8 @@ Here is the configuration:
     ProxyCommand ssh -W %h:%p bastion
 
 All we need to do is type `ssh interhost`. Interhost intself has no public IPs.
+
+VPN connection addresses:
+
+    bastion_IP = 35.246.188.64
+    someinternalhost_IP = 10.156.0.5
