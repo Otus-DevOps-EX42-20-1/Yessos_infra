@@ -22,3 +22,8 @@ VPN connection addresses:
 
     bastion_IP = 35.246.188.64
     someinternalhost_IP = 10.156.0.5
+
+Reddit APP info:
+
+    testapp_IP = 34.90.143.218
+    testapp_port = 9292
