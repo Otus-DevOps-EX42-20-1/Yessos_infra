@@ -30,3 +30,6 @@ Reddit APP info:
 
 # Packer
 Packer configuration created in ubuntu16.json file inside "packer" directory. Pararameters are done inside variables.json. Variables.json is excluded in .gitignore, variables.json.example should be used for validation instead.
+
+# Terraform
+Terraform configured inside folder terraform. Terraform apply deploys Reddit App into GCP.
