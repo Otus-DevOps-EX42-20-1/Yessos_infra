@@ -27,3 +27,6 @@ Reddit APP info:
 
     testapp_IP = 34.90.143.218
     testapp_port = 9292
+
+# Packer
+Packer configuration created in ubuntu16.json file inside "packer" directory. Pararameters are done inside variables.json. Variables.json is excluded in .gitignore, variables.json.example should be used for validation instead.
