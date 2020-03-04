@@ -33,3 +33,6 @@ Packer configuration created in ubuntu16.json file inside "packer" directory. Pa
 
 # Terraform
 Terraform configured inside folder terraform. Terraform apply deploys Reddit App into GCP. Configuration devided into modules and split into prod and stage. Add configuration for GCP bucket.
+
+# Ansible
+Basic configuration added.
