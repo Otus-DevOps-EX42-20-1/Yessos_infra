@@ -38,3 +38,4 @@ Terraform configured inside folder terraform. Terraform apply deploys Reddit App
 
 # Ansible
 DB, App and Deploy were split into separate playbooks and combined inside site.yml though import_*.
+DB, App converted into roles. Prod and Stage environments has been set-up. Folder structure reorgonized into playbook, old, files and enviromnets. Added nginix caching and additional users creation. Users cridentials encrypted with ansible-vault.
