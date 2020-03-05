@@ -31,8 +31,10 @@ Reddit APP info:
 # Packer
 Packer configuration created in ubuntu16.json file inside "packer" directory. Pararameters are done inside variables.json. Variables.json is excluded in .gitignore, variables.json.example should be used for validation instead.
 
+Packer is using ansible for provisioning.
+
 # Terraform
 Terraform configured inside folder terraform. Terraform apply deploys Reddit App into GCP. Configuration devided into modules and split into prod and stage. Add configuration for GCP bucket.
 
 # Ansible
-Basic configuration added.
+DB, App and Deploy were split into separate playbooks and combined inside site.yml though import_*.

@@ -1,31 +1,30 @@
 {
-    "variables": {
-        "machine_type": "g1-small",
-	    "image_description": "Reddit App DB",
-	    "disk_size": "10",
-	    "network": "default"
-    },
-    "builders": [
-        {
-            "type": "googlecompute",
-            "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-db-base-{{timestamp}}",
-            "image_family": "reddit-db-base",
-            "source_image_family": "{{user `source_image_family`}}",
-            "zone": "europe-west3-c",
-            "ssh_username": "packer",
-	        "image_description": "{{user `image_description`}}",
-            "disk_size": "{{user `disk_size`}}",
-	        "network": "{{user `network`}}",
-	        "tags": "{{user `tags`}}",
-            "machine_type": "{{user `machine_type`}}"
-        }
-    ],
-    "provisioners": [
-        	{
-                "type": "shell",
-                "script": "scripts/install_mongodb.sh",
-                "execute_command": "sudo {{.Path}}"
-            }
-    ]
+  "variables": {
+    "machine_type": "g1-small",
+    "image_description": "Reddit App DB",
+    "disk_size": "10",
+    "network": "default"
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "{{user `project_id`}}",
+      "image_name": "reddit-db-base-{{timestamp}}",
+      "image_family": "reddit-db-base",
+      "source_image_family": "{{user `source_image_family`}}",
+      "zone": "europe-west3-c",
+      "ssh_username": "packer",
+      "image_description": "{{user `image_description`}}",
+      "disk_size": "{{user `disk_size`}}",
+      "network": "{{user `network`}}",
+      "tags": "{{user `tags`}}",
+      "machine_type": "{{user `machine_type`}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "ansible/packer_db.yml"
+    }
+  ]
 }
