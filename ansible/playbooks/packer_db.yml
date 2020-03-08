@@ -3,25 +3,5 @@
   hosts: default
   become: true
 
-  tasks:
-    - name: import mongodb-org key
-      apt_key:
-        keyserver: keyserver.ubuntu.com
-        id: D68FA50FEA312927
-
-    - name: import mongodb-org repository
-      apt_repository:
-        repo: deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse
-        state: present
-        filename: mongodb-org-3.2
-
-    - name: install mongodb-org
-      package:
-        name: "mongodb-org"
-        state: present
-
-    - name: enable service mongod and ensure it is not masked
-      systemd:
-        name: mongod
-        enabled: yes
-        masked: no
+  roles:
+    - db

@@ -3,16 +3,5 @@
   hosts: default
   become: true
 
-  tasks:
-    - name: install ruby-full
-      package:
-        name: "ruby-full"
-        state: present
-    - name: install ruby-bundler
-      package:
-        name: "ruby-bundler"
-        state: present
-    - name: install build-essential
-      package:
-        name: "build-essential"
-        state: present
+  roles:
+    - app
